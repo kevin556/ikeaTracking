@@ -22,8 +22,8 @@ def get_current_time():
 
 def write_to_a_file(data):
     filename = create_filename()
-    with open(filename,'w') as f:
-        f.write(get_current_time()+ ' -> ' + data)
+    with open(filename,'a+') as f:
+        f.write(get_current_time()+ ' -> ' + data + '\n') 
 
 def create_filename():
     return 'order_status_number_' + order_id + '_log.txt'
